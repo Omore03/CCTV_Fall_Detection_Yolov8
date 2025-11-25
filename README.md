@@ -2,6 +2,8 @@
 
 This repository implements a real-time fall detection system using the YOLOv8 object detection model and a state machine-based temporal logic. The application processes either local video files or RTSP streams, detects humans using YOLO, and determines fall events based on changes in bounding box orientation and time-based thresholds.
 
+For any queries or contributions, feel free to reach out or open an issue.
+
 ## 📦 Features
 
 - 🔍 Real-time human detection using YOLOv8 (Ultralytics)
@@ -144,4 +146,4 @@ This project is released under the MIT License.
 ## 👨‍💻 Author
 
 Muhammad Ammar Anees, Asad Soomro
-For any queries or contributions, feel free to reach out or open an issue.
+
