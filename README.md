@@ -143,6 +143,94 @@ This project is released under the MIT License.
 
 ---
 
+## 📈 Results: YOLOv8s vs YOLOv8m vs YOLOv8l vs YOLOv8x
+
+This section summarizes the GPU benchmarking results obtained from processing all CCTV clips across four YOLOv8 model sizes.
+
+### **1. Average Inference Time (seconds per frame)**  
+| Model      | Time (s) | Approx FPS |
+|------------|----------|------------|
+| YOLOv8s    | 0.018 s  | ~55 FPS    |
+| YOLOv8m    | 0.025 s  | ~40 FPS    |
+| YOLOv8l    | 0.019 s  | ~52 FPS    |
+| YOLOv8x    | 0.032 s  | ~31 FPS    |
+
+### **2. Average VRAM Usage (MB)**  
+| Model      | Avg VRAM |
+|------------|-----------|
+| YOLOv8s    | ~230 MB   |
+| YOLOv8m    | ~305 MB   |
+| YOLOv8l    | ~400 MB   |
+| YOLOv8x    | ~525 MB   |
+
+### **3. Peak VRAM Usage (MB)**  
+| Model      | Peak VRAM |
+|------------|-----------|
+| YOLOv8s    | ~370 MB   |
+| YOLOv8m    | ~460 MB   |
+| YOLOv8l    | ~570 MB   |
+| YOLOv8x    | ~670 MB   |
+
+### **4. Average GPU Utilization (%)**
+| Model      | Utilization |
+|------------|-------------|
+| YOLOv8s    | ~8.5%       |
+| YOLOv8m    | ~11.5%      |
+| YOLOv8l    | ~17%        |
+| YOLOv8x    | ~21%        |
+
+### **5. Average Power Consumption (W)**
+| Model      | Power (W) |
+|------------|-----------|
+| YOLOv8s    | ~56 W     |
+| YOLOv8m    | ~59 W     |
+| YOLOv8l    | ~62 W     |
+| YOLOv8x    | ~70 W     |
+
+---
+
+## 📊 Visual Summary
+
+### **Average GPU Utilization**
+![GPU Utilization](benchmark_results/bar_avg_util.png)
+
+### **Average VRAM Usage**
+![Average VRAM](benchmark_results/bar_avg_vram.png)
+
+### **Peak VRAM Usage**
+![Peak VRAM](benchmark_results/bar_peak_vram.png)
+
+### **Average Inference Time**
+![Inference Time](benchmark_results/bar_avg_inf_time.png)
+
+### **Average Power**
+![Power](benchmark_results/bar_avg_power.png)
+
+---
+
+## 🧠 Interpretation & Takeaways
+
+- **YOLOv8s** is the most efficient model:
+  - Fastest inference (~55 FPS)
+  - Lowest GPU utilization
+  - Lowest VRAM usage
+  - Best choice for real-time fall detection on low or mid-range GPUs.
+
+- **YOLOv8m** provides a balanced improvement in robustness while maintaining good speed (~40 FPS).
+
+- **YOLOv8l** behaves unexpectedly fast in some clips due to batch-size and optimization effects and maintains moderate VRAM usage.
+
+- **YOLOv8x** is the heaviest:
+  - Highest VRAM consumption (~525–670 MB)
+  - Highest power draw (~70 W)
+  - Slowest (≈ 31 FPS)
+  - Only recommended if maximum accuracy is required.
+
+Overall, **YOLOv8s** is the optimal choice for real-time CCTV fall detection.
+
+
+---
+
 ## 👨‍💻 Author
 
 Muhammad Ammar Anees, Asad Soomro
