@@ -1,0 +1,5 @@
+model,clip,vram_mb,peak_mb,avg_mb
+yolov8s.pt,clip_0.mp4,74.0,74.0,74.00
+yolov8m.pt,clip_0.mp4,86.0,86.0,86.00
+yolov8l.pt,clip_0.mp4,112.0,112.0,112.00
+yolov8x.pt,clip_0.mp4,162.0,162.0,162.00

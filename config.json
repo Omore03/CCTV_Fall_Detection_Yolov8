@@ -1,0 +1,21 @@
+{
+    "perception_engine": {
+        "model_name": "YOLOv8s.pt",
+        "confidence_threshold": 0.75
+    },
+    "analysis_engine": {
+        "state_tolerance_sec": 2,
+        "fps": 2,
+        "cooldown": 10
+    },
+    "video": {
+        "url": "clips\\clip_15.mp4",
+        "type": "local",
+        "fps": 24,
+        "display": {
+            "flag": true,
+            "width": 640,
+            "height": 360
+        }
+    }
+}

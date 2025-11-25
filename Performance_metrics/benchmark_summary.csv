@@ -1,0 +1,5 @@
+Model,Inference Time (s),GPU (%),VRAM (MB),Power (W)
+yolov8l.pt,0.03,17.32,1127.39,65.18
+yolov8m.pt,0.03,13.58,1041.9,61.63
+yolov8s.pt,0.02,9.74,1157.81,56.89
+yolov8x.pt,0.03,24.45,1142.71,86.85
